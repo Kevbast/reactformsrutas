@@ -10,12 +10,20 @@ export default class FormSimple extends Component {
         console.log("Petición lista!");
         //PARA RECUPERAR EL VALOR DE UN OBJETO REACT:
         let nombre= this.cajaNombre.current.value;
-        console.log("Nombre recibido "+ nombre)
+        console.log("Nombre recibido: "+ nombre);
+
+        this.setState({
+          nombre:nombre
+        })
+    }
+    state={
+      nombre:""
     }
   render() {
     return (
       <div>
-        <h1>FORMULARIO SIMPLE REACT</h1>
+        <h1>FORMULARIO SIMPLE REACT</h1>  
+        <h2 style={{color:"green"}}>{this.state.nombre}</h2>
         <form onSubmit={this.peticionFormulario}>
             <label>Nombre: </label>
             <input type="text" ref={this.cajaNombre}/>
