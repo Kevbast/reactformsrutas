@@ -7,6 +7,8 @@ import Musica from './Musica'
 import FormSimple from './FormSimple'
 import Collatz from './Collatz'
 import TablaMultiplicar from './TablaMultiplicar'
+import TablaMultiplicarv2 from './TablaMultiplicarv2'
+import SeleccionMultiple from './SeleccionMultiple'
 //snippet rcc + tab 
 export default class Router extends Component {
   render() {
@@ -16,10 +18,11 @@ export default class Router extends Component {
             <Route path='/' element={<HomeComponent/>}/>
             <Route path='/cine' element={<Cine/>}/>
             <Route path='/musica' element={<Musica/>}/>
-            <Route path='/musica' element={<Musica/>}/>
             <Route path='/formsimple' element={<FormSimple/>}/>
             <Route path='/collatz' element={<Collatz/>}/>
             <Route path='/TablaMultiplicar' element={<TablaMultiplicar/>}/>
+            <Route path='/TablaMultiplicarv2' element={<TablaMultiplicarv2/>}/>
+            <Route path='/SeleccionMultiple' element={<SeleccionMultiple/>}/>
         </Routes>
       </BrowserRouter>
     )

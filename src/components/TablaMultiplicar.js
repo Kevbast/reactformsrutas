@@ -8,19 +8,20 @@ export default class TablaMultiplicar extends Component {
         let numero=parseInt(this.cajaNumero.current.value);//recogemos el valor del input number
         let aux=[]//declaramos una variable auxiliar
 
-            for (let i = 1; i < 11; i++) {
+            for (let i = 1; i <= 10; i++) {
                 aux.push(numero*i)//funcionalidad tabla de multiplicar 
             }
 
             //Pasamos el aux cada vez que cambie    
             this.setState({
-                numeros:aux
+                tabla:aux
             })
         }
         
         state={
-            numeros:[],
+            tabla:[],
         }
+
   render() {
     return (
       <div>
@@ -29,7 +30,9 @@ export default class TablaMultiplicar extends Component {
             <label>Número: </label>
             <input type="number" ref={this.cajaNumero}/>
             <button>Mostrar tabla</button>
-            <table border="1" style={{textAlign:"center"}}>
+            
+        </form>
+        <table border="1" style={{textAlign:"center"}}>
                 <thead>
                     <tr>
                         <th>OPERACIÓN</th>
@@ -38,7 +41,7 @@ export default class TablaMultiplicar extends Component {
                 </thead>            
             <tbody>
                 {
-                    this.state.numeros.map((num,index)=>{
+                    this.state.tabla.map((num,index)=>{
                         return(<tr key={index}>
                             <td>{this.cajaNumero.current.value}*{index+1}</td>
                             <td >{num}</td>
@@ -46,8 +49,7 @@ export default class TablaMultiplicar extends Component {
                     })
                 }
             </tbody>
-            </table>
-        </form>
+        </table>
       </div>
     )
   }
