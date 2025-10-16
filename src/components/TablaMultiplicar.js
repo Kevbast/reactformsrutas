@@ -8,8 +8,8 @@ export default class TablaMultiplicar extends Component {
         let numero=parseInt(this.cajaNumero.current.value);//recogemos el valor del input number
         let aux=[]//declaramos una variable auxiliar
 
-            for (let i = 0; i < 10; i++) {
-                aux.push(numero*i) 
+            for (let i = 1; i < 11; i++) {
+                aux.push(numero*i)//funcionalidad tabla de multiplicar 
             }
 
             //Pasamos el aux cada vez que cambie    
